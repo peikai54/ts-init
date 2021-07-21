@@ -1,2 +1,4 @@
-import "./index.css";
-document.getElementById("app").innerHTML = "hello world";
+import React from "react";
+import ReactDOM from "react-dom";
+
+ReactDOM.render(<>hello world</>, document.getElementById("app"));

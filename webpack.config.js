@@ -16,6 +16,15 @@ const config = {
         test: /\.css$/i,
         use: ["style-loader", "css-loader"],
       },
+      {
+        test: /\.jsx?$/,
+        use: [
+          {
+            loader: "babel-loader",
+            options: { presets: ["@babel/preset-react"] },
+          },
+        ],
+      },
     ],
   },
   plugins: [
