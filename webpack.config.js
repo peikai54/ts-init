@@ -5,7 +5,7 @@ const dist = path.resolve(__dirname, "dist");
 
 const config = {
   mode: "development",
-  entry: "./src/index.js",
+  entry: "./src/index.tsx",
   output: {
     path: dist,
     clean: true,
@@ -25,7 +25,15 @@ const config = {
           },
         ],
       },
+      {
+        test: /\.tsx?$/,
+        use: "ts-loader",
+        exclude: /node_modules/,
+      },
     ],
+  },
+  resolve: {
+    extensions: [".tsx", ".ts", ".js"],
   },
   plugins: [
     new HtmlWebpackPlugin({
