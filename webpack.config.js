@@ -33,6 +33,11 @@ const config = {
       template: "./src/index.html",
     }),
   ],
+  devServer: {
+    open: true,
+    port: 9000,
+    publicPath: "/",
+  },
 };
 
 module.exports = config;
